@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Car;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -13,7 +15,18 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.view');
+
+        $carsCount = Car::count();
+        $brandCount = Car::distinct()->pluck("Brand")->count();
+        $usersCount = User::count();
+
+        $Data = [
+            "carsCount" => $carsCount,
+            "brandCount" => $brandCount,
+            "usersCount" => $usersCount,
+        ];
+        
+        return view('dashboard.view', ["Data" => $Data]);
     }
 
     /**
