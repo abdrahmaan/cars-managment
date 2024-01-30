@@ -76,8 +76,14 @@ Route::middleware(['user-auth'])->group(function () {
     // Delete Car 
     Route::get('/delete-user/{id}', [UsersController::class,"destroy"]);
 
-    // Cars View
+    // Users View
     Route::get('/users', [UsersController::class,"index"] );
+
+    // Change Password 
+    Route::get('/change-password', [UsersController::class,"change_password_page"] );
+
+    // Change Password - Logic
+    Route::post('/change-password', [UsersController::class,"change_password_logic"] );
 // ***************************************************************************
 
 });

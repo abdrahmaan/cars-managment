@@ -43,6 +43,45 @@ class UsersController extends Controller
             return redirect("/login");
     }
 
+    public function change_password_page() {
+
+        return view("users.change-password");
+    }
+
+    public function change_password_logic(Request $request) {
+
+        $request->validate([
+            "oldPassword" => "required|min:6",
+            "newPassword" => "required|min:6",
+        ],[ 
+
+            "oldPassword.required" => "كلمة السر القديمة مطلوبة",
+            "oldPassword.min" => "أقل حروف لكلمة السر القديمة 6 حروف",
+            "newPassword.required" => "كلمة السر الجديدة مطلوبة",
+            "newPassword.min" => "أقل حروف لكلمة السر الجديدة 6 حروف",
+        ]);
+
+        $userID = session()->get("user-data")->id;
+        $userData = User::where("id",$userID)->first();
+
+        if ($request->oldPassword == $userData->password) {
+            
+            $query =  User::where("id",$userID)->update([
+                    "password" => $request->newPassword
+            ]);
+
+            if ($query) {
+                session()->flash("message","تم تغيير كلمة السر بنجاح");
+                return redirect("/change-password");
+            }
+        } else {
+            session()->flash("error","برجاء التأكد من كلمة السر القديمة");
+            return redirect("/change-password");
+        }
+
+        return dd($userData);
+    }
+
     /**
      * Display a listing of the resource.
      *

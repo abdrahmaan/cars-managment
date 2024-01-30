@@ -115,7 +115,7 @@
             </li>
               <!-- تغيير كلمة السر -->
               <li class="nav-item">
-                <a href="#" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+                <a href="/change-password" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                     <i class="nav-icon mx-2 fas fa-key"></i>
                     <p>
                     تغيير كلمة السر
