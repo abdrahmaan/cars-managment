@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+ 
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -276,5 +277,24 @@
 <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
 @yield('script')
 @yield('css')
+ {{-- Sidebar Color Handle Script --}}
+ <script>
+
+  // This code will be executed when the entire page has finished loading
+  window.addEventListener('load', function() {
+          let SidebarButtons = document.querySelectorAll(".nav-link");
+          let pagePath = window.location.pathname;
+
+          SidebarButtons.forEach(link => {
+              link.classList.remove("active");
+
+              if (pagePath.includes(link.dataset.url)) {
+                  link.classList.add("active");
+              }
+
+          });
+          
+        });
+</script>
 </body>
 </html>

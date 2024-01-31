@@ -3,7 +3,7 @@
     
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside id="main" class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="#" class="brand-link d-none flex-row-reverse">
         <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -41,7 +41,7 @@
                 with font-awesome or any other icon font library -->
               <!-- لوحة التحكم -->
             <li class="nav-item">
-              <a href="/dashboard" class="nav-link active d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="/dashboard" data-url="dashboard" class="nav-link active d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
               <i class="nav-icon mx-2 fas fa-tachometer-alt"></i>
                 <p>
                   لوحة التحكم
@@ -50,7 +50,7 @@
             </li>
               <!-- إدارة السيارات -->
             <li class="nav-item">
-              <a href="#" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="#"  data-url="car" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                 <i class="nav-icon fas fa-car"></i>
                 <p>
                   إدارة السيارات
@@ -90,7 +90,7 @@
             </li>
               <!-- إدارة الموظفين -->
               <li class="nav-item">
-              <a href="#" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="#"  data-url="user" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   إدارة المستخدمين
@@ -115,7 +115,7 @@
             </li>
               <!-- تغيير كلمة السر -->
               <li class="nav-item">
-                <a href="/change-password" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+                <a href="/change-password"  data-url="change-password" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                     <i class="nav-icon mx-2 fas fa-key"></i>
                     <p>
                     تغيير كلمة السر
