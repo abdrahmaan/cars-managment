@@ -168,7 +168,7 @@
                                 <td>{{$row->Passengers}}</td>
                                 <td>{{$row->PurchasePrice}}</td>
                                 <td>
-                                    <button class="btn btn-success">تغيير</button>
+                                    <a href="/edit-car/{{$row->id}}" class="btn btn-success">تعديل</a>
                                     <a href="/delete-car/{{$row->id}}" class="btn btn-danger">حذف</a>
                                 </td>
                             </tr>

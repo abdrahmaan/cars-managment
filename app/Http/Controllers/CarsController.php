@@ -282,7 +282,14 @@ class CarsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $carData = Car::where("id",$id)->first();
+
+        if ($carData) {
+            return view("cars.edit", ["Data" => $carData]);
+        } else {
+            return redirect()->back();
+        }
+
     }
 
     /**
@@ -294,7 +301,70 @@ class CarsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            "ModelName" => "required",
+            "ModelType" => "required",
+            "ModelYear" => "required|numeric",
+            "CC" => "required|numeric",
+            "HorsePower" => "required|numeric",
+            "FuelLiter" => "required|numeric",
+            "Height" => "required|numeric",
+            "Width" => "required|numeric",
+            "Length" => "required|numeric",
+            "Tier" => "required|numeric",
+            "PurchasePrice" => "required|numeric",
+        ],
+        [
+            "ModelName.required" => "من فضلك أدخل إسم الموديل",
+            "ModelType.required" => "من فضلك أدخل نوع الموديل",
+            "ModelYear.required" => "من فضلك أدخل سنة الصنع",
+            "ModelYear.numeric" => "من فضلك سنة الصنع بالأرقام فقط",
+            "CC.required" => "CC من فضلك ادخل الـ",
+            "CC.numeric" => " مطلوب بالأرقام فقط CC الـ",
+            "HorsePower.required" => "من فضلك أدخل قوة الحصان",
+            "HorsePower.numeric" => "قوة الحصان بالأرقام فقط",
+            "FuelLiter.required" => "من فضلك أدخل عدد الليترات للتانك",
+            "FuelLiter.numeric" => "عدد الليترات للتانك بالأرقام فقط",
+            "Height.required" => "من فضلك أدخل طول السيارة",
+            "Height.numeric" => "طول السيارة بالأرقام فقط",
+            "Width.required" => "من فضلك ادخل عرض السيارة",
+            "Width.numeric" => "عرض السيارة بالأرقام فقط",
+            "Length.required" => "من فضلك أدخل إرتفاع السيارة",
+            "Length.numeric" => "إرتفاع السيارة بالأرقام فقط",
+            "Tier.required" => "من فضلك أدخل مقاس الكاوتش",
+            "Tier.numeric" => "مقاس الكاوتش بالأرقام فقط",
+            "PurchasePrice.required" => "من فضلك ادخل سعر شراء السيارة",
+            "PurchasePrice.numeric" => "سعر شراء السيارة بالأرقام فقط",
+        ]); 
+
+       $update = Car::where("id",$id)->update([  
+                    "Brand" => $request->Brand,
+                    "Category" => $request->Category,
+                    "ModelName" => $request->ModelName,
+                    "ModelType" => $request->ModelType,
+                    "ModelYear" => $request->ModelYear,
+                    "Transmission" => $request->Transmission,
+                    "TransmissionCount" =>  $request->TransmissionCount,
+                    "FourXFour" =>  $request->FourXFour,
+                    "PushingType" =>  $request->PushingType,
+                    "CC" =>  $request->CC,
+                    "Cylinder" =>  $request->Cylinder,
+                    "HorsePower" =>  $request->HorsePower,
+                    "FuelType" =>  $request->FuelType,
+                    "FuelLiter" =>  $request->FuelLiter,
+                    "Tier" =>  $request->Tier,
+                    "Height" =>  $request->Height,
+                    "Width" =>  $request->Width,
+                    "Length" =>  $request->Length,
+                    "Passengers" =>  $request->Passengers,
+                    "PurchasePrice" =>  $request->PurchasePrice,
+            ]);
+
+            if ($update) {
+                session()->flash("message","تم تعديل السيارة بنجاح");
+                return redirect()->back();
+            }
+
     }
 
     /**
