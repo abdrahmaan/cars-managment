@@ -330,6 +330,7 @@
                 ModelYear : {
                     required: true,
                     minlength: 4,
+                    maxlength: 4,
                 },
                 CC: {
                     required: true
@@ -366,6 +367,7 @@
                 ModelYear : {
                     required: "من فضلك أدخل سنة الصنع",
                     minlength: "من فضلك أدخل سنة صحيحة",
+                    maxlength: "من فضلك أدخل سنة صحيحة",
                 },
                 CC: {
                     required: "CC من فضلك أدخل الـ"
