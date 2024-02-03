@@ -39,7 +39,7 @@
                           <div class="col-lg-3">
                             <div class="form-group  mx-2 d-block">
                                 <label for="CC" class="text-right w-100">CC قيمة الـ</label>
-                                <input name="CC" type="text" class="form-control text-right" id="exampleInputEmail1" placeholder="CC">
+                                <input name="CC" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="CC">
                             </div>
                           </div>
                           <!--  مدى قوة الحصان -->
