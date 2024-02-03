@@ -120,7 +120,7 @@ class CarsController extends Controller
         $Category = $request->query('Category');
         $ModelYear = $request->query('ModelYear');
         
-        if (isset($CCType)) {
+        if (isset($CCType) && $CC !== null) {
 
             if ($CCType == "Greater") {
 
@@ -137,7 +137,7 @@ class CarsController extends Controller
             }
         }
 
-        if (isset($HorsePowerType)) {
+        if (isset($HorsePowerType) && $HorsePower !== null) {
 
             if ($HorsePowerType == "Greater") {
 
