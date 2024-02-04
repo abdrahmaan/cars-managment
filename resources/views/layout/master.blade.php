@@ -305,6 +305,12 @@
 
     let btnmenu = document.querySelector("a[data-widget='pushmen']");
     
+    let sidebarMedia = document.querySelector("aside.main-sidebar");
+
+    if (window.screen.width < 460) {
+      sidebarMedia.classList.contains("layout-collapsed-v2") ? null : sidebarMedia.classList.add("layout-collapsed-v2"); 
+    }
+
     btnmenu.addEventListener("click" ,function () {
       
       let sidebar = document.querySelector("aside.main-sidebar");
@@ -324,7 +330,6 @@
       }
 
     })
-    console.log(sidebar);
   });
 
 </script>
