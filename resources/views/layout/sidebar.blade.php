@@ -41,7 +41,7 @@
                 with font-awesome or any other icon font library -->
               <!-- لوحة التحكم -->
             <li class="nav-item">
-              <a href="/dashboard" data-url="dashboard" class="nav-link active d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="/dashboard" data-url="dashboard" class="nav-link w-100 active d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
               <i class="nav-icon mx-2 fas fa-tachometer-alt"></i>
                 <p>
                   لوحة التحكم
@@ -50,7 +50,7 @@
             </li>
               <!-- إدارة السيارات -->
             <li class="nav-item">
-              <a href="#"  data-url="car" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="#"  data-url="car" class="nav-link w-100 d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                 <i class="nav-icon fas fa-car"></i>
                 <p>
                   إدارة السيارات
@@ -59,19 +59,19 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/new-car" class="nav-link  d-flex flex-row-reverse align-items-center">
+                  <a href="/new-car" class="nav-link w-100  d-flex flex-row-reverse align-items-center">
                     <i class="far fa-circle nav-icon"></i>
                     <p>إضافة سيارة</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/cars" class="nav-link d-flex flex-row-reverse align-items-center">
+                  <a href="/cars" class="nav-link w-100 d-flex flex-row-reverse align-items-center">
                     <i class="far fa-circle nav-icon"></i>
                     <p>بحث فى السيارات</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/new-car-import" class="nav-link d-flex flex-row-reverse align-items-center">
+                  <a href="/new-car-import" class="nav-link w-100 d-flex flex-row-reverse align-items-center">
                     <i class="far fa-circle nav-icon"></i>
                     <p>رفع ملف إكسيل</p>
                   </a>
@@ -81,7 +81,7 @@
             </li>
               <!-- عرض أسعار -->
             <li class="nav-item d-none">
-              <a href="#" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="#" class="nav-link w-100 d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                   <i class="nav-icon mx-2 fas fa-money-bill"></i>
                   <p>
                   عرض أسعار
@@ -90,7 +90,7 @@
             </li>
               <!-- إدارة الموظفين -->
               <li class="nav-item">
-              <a href="#"  data-url="user" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="#"  data-url="user" class="nav-link w-100 d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   إدارة المستخدمين
@@ -99,13 +99,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/new-user" class="nav-link  d-flex flex-row-reverse align-items-center">
+                  <a href="/new-user" class="nav-link w-100  d-flex flex-row-reverse align-items-center">
                     <i class="far fa-circle nav-icon"></i>
                     <p>إضافة مستخدم</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/users" class="nav-link d-flex flex-row-reverse align-items-center">
+                  <a href="/users" class="nav-link w-100 d-flex flex-row-reverse align-items-center">
                     <i class="far fa-circle nav-icon"></i>
                     <p>بحث فى المستخدمين</p>
                   </a>
@@ -115,7 +115,7 @@
             </li>
               <!-- تغيير كلمة السر -->
               <li class="nav-item">
-                <a href="/change-password"  data-url="change-password" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+                <a href="/change-password"  data-url="change-password" class="nav-link w-100 d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                     <i class="nav-icon mx-2 fas fa-key"></i>
                     <p>
                     تغيير كلمة السر
@@ -125,7 +125,7 @@
               <!--  -->
               <!-- تسجيل الخروج -->
             <li class="nav-item">
-              <a href="/logout" class="nav-link d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
+              <a href="/logout" class="nav-link w-100 d-flex flex-row-reverse align-items-center d-flex flex-row-reverse align-items-center">
                   <i class="nav-icon mx-2 fas fa-lock"></i>
                   <p>
                   تسجيل الخروج

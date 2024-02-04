@@ -46,11 +46,11 @@
 
   @if (session()->get('user-data') !== null)
        <!-- Navbar -->
-      <nav class="main-header navbar navbar-expand navbar-white navbar-light d-flex flex-row-reverse justify-content-between">
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light d-flex  justify-content-between">
         <!-- Left navbar links -->
-        <ul class="navbar-nav">
-          <li class="d-none nav-item">
-            <a class="nav-link d-flex flex-row-reverse align-items-center" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <ul class="navbar-nav d-md-none">
+          <li class=" nav-item">
+            <a class="nav-link d-flex flex-row-reverse align-items-center" data-widget="pushmen" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item  d-none">
             <a href="index3.html" class="nav-link d-flex flex-row-reverse align-items-center">Home</a>
@@ -295,6 +295,38 @@
           });
           
         });
+</script>
+
+{{-- Sidebar Responsive collapse handle --}}
+
+<script>
+
+  window.addEventListener("load", function(){
+
+    let btnmenu = document.querySelector("a[data-widget='pushmen']");
+    
+    btnmenu.addEventListener("click" ,function () {
+      
+      let sidebar = document.querySelector("aside.main-sidebar");
+      let content = document.querySelector("div.content-wrapper");
+      
+      if (sidebar.classList.contains("layout-collapsed-v2")) {
+
+        sidebar.classList.remove("layout-collapsed-v2");
+        content.classList.remove("content-wrapper-v2");
+        
+        
+      } else {
+
+        sidebar.classList.add("layout-collapsed-v2")
+        content.classList.add("content-wrapper-v2");
+
+      }
+
+    })
+    console.log(sidebar);
+  });
+
 </script>
 </body>
 </html>
